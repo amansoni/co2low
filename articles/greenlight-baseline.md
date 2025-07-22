@@ -1,5 +1,3 @@
-<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
-
 # Understanding Poverty: Greenlight Baseline Assessment 2024
 
 ## Introduction
@@ -106,8 +104,3 @@ Understanding these realities allows CO2 LOW (NPC) and partners to:
 This baseline assessment is a call to action for all stakeholders—government, business, civic sector, and the broader community—to work together in breaking the cycle of poverty. By leveraging Greenlight insights, we can help families move from “stuck,” to “struggling but trying,” to “doing well”—restoring dignity and hope for the future[^1].
 
 *For more about our work in community upliftment and environmental sustainability, please connect with CO2 LOW (NPC).*
-
-<div style="text-align: center">⁂</div>
-
-[^1]: Greenlight-Poverty-Report-Baseline-C02-Low-04-12-2024.docx
-
