@@ -11,7 +11,6 @@
     <header class="navbar">
       <div class="container flex items-center justify-between">
         <a href="#home" class="navbar__brand"><strong>CO<sub>2</sub> Low</strong></a>
-
         <!-- Mobile toggle (hidden on larger screens) -->
         <button
           class="nav-toggle btn btn--secondary btn--sm"
@@ -20,20 +19,14 @@
         >
           ☰
         </button>
-
         <nav class="nav" id="navMenu">
           <ul class="nav__links flex gap-16">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
+            <li><a href="#advantages">Why Us?</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="#context">Climate Context</a></li>
-            <li><a href="#process">Process</a></li>
-            <li>
-              <a href="articles/greenlight-baseline.html">Greenlight Baseline</a>
-            </li>
-            <li>
-              <a href="articles/empowering-rural-farmers.html">Empowering Rural Farmers</a>
-            </li>
             <li>
               <a href="#contact" class="btn btn--primary btn--sm">Contact</a>
             </li>
@@ -46,19 +39,17 @@
     <main>
       <!-- ---------- Hero ---------- -->
       <section id="home" class="hero">
-        <div
-          class="container flex flex-col items-center justify-center text-center gap-16"
-        >
+        <div class="container flex flex-col items-center justify-center text-center gap-16">
+          <img src="images/co2low-logo.jpg" alt="CO₂ LOW Logo" class="hero-logo" style="max-width:380px; margin-bottom: 1em;" />
           <h1>CO<sub>2</sub> Low</h1>
-          <h2 class="tagline">
-            Your Partner for a Cleaner, Greener Future
-          </h2>
+          <h2 class="tagline">Turning Waste Into Opportunity</h2>
           <p class="mission">
-            Reducing environmental impact through innovative carbon management
-            solutions tailored for the South African market.
+            Transform food and organic waste into resources that power
+            regenerative agriculture, build resilient communities, and reduce
+            environmental impact.
           </p>
           <p class="location status status--info">
-            Based in eThekwini Municipality, KwaZulu-Natal, South Africa
+            Founded in 2021, based in eThekwini Municipality, KwaZulu-Natal, South Africa
           </p>
           <a href="#contact" class="btn btn--primary btn--lg">Work with us</a>
         </div>
@@ -69,14 +60,62 @@
         <div class="container">
           <h2>About Us</h2>
           <p>
-            CO2 Low is a carbon management consultancy rooted in eThekwini
-            Municipality. We combine international best practices with deep
-            South African expertise to help businesses navigate climate
-            regulations, reduce emissions, and unlock opportunities in the
-            local carbon market.
+            <strong>CO₂ LOW</strong> is a South African non-profit pioneering
+            practical, scalable solutions for food security, climate action, 
+            and community empowerment. We are a team of passionate change-makers, 
+            agricultural innovators, and community leaders committed to driving impact 
+            from the ground up. 
+          </p>
+          <p>
+            <strong>We deliver</strong> holistic programs that bridge business, 
+            environmental, and social needs, working closely with rural farmers, 
+            youth, and industry partners. We offer carbon management consultancy combining international
+            best practices with deep South African expertise.
           </p>
         </div>
-      </section>
+        <section id="process" class="section">
+          <div class="container">
+            <h2>Our Process</h2>
+            <div class="process-grid grid">
+              <div class="card">
+                <div class="card__body">
+                  <h3>1. Assess</h3>
+                  <p>
+                    Detailed audit of current emissions using South African
+                    standards and methodologies.
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__body">
+                  <h3>2. Plan</h3>
+                  <p>
+                    Develop step-by-step roadmap aligned with South African
+                    climate policies and local regulations.
+                  </p>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card__body">
+                  <h3>3. Act</h3>
+                  <p>
+                    Implement carbon reduction initiatives and offset remaining
+                    emissions through trusted South African and international
+                    projects.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+                <div class="container" style="text-align:center; margin: 2em 0;">
+          <a href="https://www.undp.org/south-africa/blog/model-circular-and-sustainable-food-production-localisation-and-replication" target="_blank" rel="noopener" class="btn btn--
+secondary"><img src="images/undp-logo.svg" alt="UNDP Logo" style="height: 80px; vertical-align: middle; margin-right: 8px;">
+            A Model for Circular and Sustainable Food Production: Localisation and Replication
+          </a>
+        </div>
+
+      </section>  
 
       <!-- ---------- Services ---------- -->
       <section id="services" class="section section--alt">
@@ -113,6 +152,36 @@
                 </p>
               </div>
             </div>
+            <div class="card">
+              <div class="card__body">
+                <h3>End-to-End Circular Solutions</h3>
+                <p>
+                  We process food waste locally, slashing landfill and logistics 
+                  costs while creating nutrient-rich compost, animal feed, 
+                  renewable energy, and affordable, fresh food.
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__body">
+                <h3>Climate Action & Regeneration</h3>
+                <p>
+                  Our methods—from composting and biochar, to black soldier fly 
+                  farming and biogas—capture carbon, restore soil health, 
+                  and safeguard biodiversity.
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__body">
+                <h3>Community at the Core</h3>
+                <p>
+                  By empowering local farmers and youth with training, 
+                  jobs, and market access, we foster economic growth, 
+                  self-sufficiency, and stronger communities.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -128,15 +197,6 @@
                 <p>
                   Deep understanding of South African climate regulations,
                   carbon markets, and business environment.
-                </p>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card__body">
-                <h3>eThekwini Municipality Partnership</h3>
-                <p>
-                  Based in eThekwini Municipality, we understand local climate
-                  initiatives and sustainability goals.
                 </p>
               </div>
             </div>
@@ -158,12 +218,120 @@
                 </p>
               </div>
             </div>
+            <div class="card">
+              <div class="card__body">
+                <h3>Regenerative Agriculture</h3>
+                <p>
+                  Grow organic, chemical-free crops and animal produce using climate-smart methods.
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__body">
+                <h3>Food Waste to Resources</h3>
+                <p>
+                  Convert local food waste into compost, animal feed, biochar, and biogas.
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__body">
+                <h3>Rural Enterprise</h3>
+                <p>
+                  Train and support emerging farmers to launch sustainable small businesses.
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__body">
+                <h3>Community Upliftment</h3>
+                <p>
+                  Create jobs, build skills, and improve food security in high-poverty areas.
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__body">
+                <h3>Environmental Stewardship</h3>
+                <p>
+                  Strengthen resilience by restoring soils, reducing emissions, and conserving water.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ---------- Projects ---------- -->
+      <section id="projects" class="section section--alt">
+        <div class="container">
+          <h2>Projects of Note</h2>
+          <p>
+            Our projects demonstrate our commitment to sustainable development,
+            community empowerment, and climate action. Here are some of our
+            recent initiatives:
+          </p>
+          <div class="services-grid grid">
+            <div class="card">
+              <div class="card__body">
+                <h3>Greenlight Baseline Poverty Assessment (2024)</h3>
+                <p>
+                  A comprehensive survey conducted in Tongaat, KZN, assessing multi-dimensional poverty across six domains: 
+                </p>
+                <ul>
+                  <li>Income</li>
+                  <li>Health</li>
+                  <li>Housing</li>
+                  <li>Education</li>
+                  <li>Organisation</li>
+                  <li>Motivation</li>
+                </ul>
+                <p>
+                  Findings highlight critical challenges in:
+                </p>
+                <ul>
+                  <li>Employment</li>
+                  <li>Income stability</li>
+                  <li>Housing</li>
+                  <li>Sanitation</li>
+                  <li>Financial access</li>
+                  <li>Community voices underscoring hardship</li>
+                </ul>
+                <p>
+                  The data informs targeted community support and poverty alleviation strategies.
+                </p>  
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__body">
+                <h3>From Waste to Wonder</h3>
+                <p>
+                  A partnership initiative supporting 16 emerging farmers growing Tabasco chilies on irrigated land at Soul &amp; Science Farm.
+                  The project transforms food waste into compost, animal feed, and biogas, creating a closed-loop system that reduces landfill waste and generates renewable energy.
+                </p>
+                <p><br>
+                  Features include:
+                  <ul>
+                    <li>Market-guaranteed pricing</li>
+                    <li>Training</li>
+                    <li>Local job creation</li>
+                    <li>Sustainable circular farming practices using certified compost</li>
+                  </ul>
+                </p>
+                <p>
+                  The project creates stable income opportunities (R48,000–R84,000 per year per farmer on 0.25 ha) and up to 480 local jobs.
+                </p>
+                <p><br>
+                  Designed as a replicable model balancing social equity, environmental stewardship, and commercial viability.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <!-- ---------- Climate Context ---------- -->
-      <section id="context" class="section section--alt">
+      <section id="context" class="section">
         <div class="container">
           <h2>South African Climate Context</h2>
           <p>
@@ -186,70 +354,43 @@
         </div>
       </section>
 
-      <!-- ---------- Process ---------- -->
-      <section id="process" class="section">
-        <div class="container">
-          <h2>Our Process</h2>
-          <div class="process-grid grid">
-            <div class="card">
-              <div class="card__body">
-                <h3>1. Assess</h3>
-                <p>
-                  Detailed audit of current emissions using South African
-                  standards and methodologies.
-                </p>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card__body">
-                <h3>2. Plan</h3>
-                <p>
-                  Develop step-by-step roadmap aligned with South African
-                  climate policies and local regulations.
-                </p>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card__body">
-                <h3>3. Act</h3>
-                <p>
-                  Implement carbon reduction initiatives and offset remaining
-                  emissions through trusted South African and international
-                  projects.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- ---------- Contact ---------- -->
-      <section id="contact" class="section section--alt">
+      <section id="contact" class="section  section--alt">
         <div class="container">
           <h2>Contact Us</h2>
           <p>
             Ready to decarbonise your operations? Get in touch with our team in
             eThekwini Municipality.
           </p>
-
           <div class="contact-details flex flex-col gap-8">
             <p>
               <strong>Email:</strong>
-              <a href="mailto:info@co2low.co.za">info@co2low.co.za</a>
+              <a href="mailto:donovan@co2low.co.za,anban@co2low.org">donovan@co2low.co.za & anban@co2low.org</a>
             </p>
             <p>
               <strong>Phone:</strong>
-              <a href="tel:+2731XXXXXXX">+27 (0)31 XXX XXXX</a>
+              <a href="tel:+27837865143">+27 (0)83 786 5143</a>
             </p>
             <p>
-              <strong>Location:</strong> eThekwini Municipality, KwaZulu-Natal,
-              South Africa
+              <address style="font-style: normal;">
+                <strong>Location:</strong> KwaZulu-Natal, South Africa ·
+                <a
+                  href="https://maps.google.com/maps?q=-29.547380447387695%2C31.079301834106445&z=17"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >View on Map</a>
+              </address>
+            </p>
+            <p>
+              Follow us on
+              <a
+                href="https://www.linkedin.com/company/co2-low/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >LinkedIn</a>
             </p>
           </div>
-
-          <a href="mailto:info@co2low.co.za" class="btn btn--primary btn--lg mt-8"
-            >Email Us</a
-          >
+          <a href="mailto:donovan@co2low.co.za,anban@co2low.org" class="btn btn--primary btn--lg mt-8">Email Us</a>
         </div>
       </section>
     </main>
