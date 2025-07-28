@@ -27,6 +27,7 @@
             <li><a href="#advantages">Why Us?</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#context">Climate Context</a></li>
+            <li><a href="#gallery">Gallery</a></li>
             <li>
               <a href="#contact" class="btn btn--primary btn--sm">Contact</a>
             </li>
@@ -109,15 +110,6 @@
             </div>
           </div>
         </section>
-        <h2>Our news</h2>
-
-                <div class="container" style="text-align:center; margin: 2em 0;">
-          <a href="https://www.undp.org/south-africa/blog/model-circular-and-sustainable-food-production-localisation-and-replication" target="_blank" rel="noopener" class="btn btn--
-secondary"><img src="images/undp-logo.svg" alt="UNDP Logo" style="height: 80px; vertical-align: middle; margin-right: 8px;">
-            A Model for Circular and Sustainable Food Production: Localisation and Replication
-          </a>
-        </div>
-
       </section>  
 
       <!-- ---------- Services ---------- -->
@@ -302,7 +294,8 @@ secondary"><img src="images/undp-logo.svg" alt="UNDP Logo" style="height: 80px; 
                 </ul>
                 <p>
                   The data informs targeted community support and poverty alleviation strategies.
-                </p>  
+                  <a href="https://www.greenlightmovement.org.za/" target="_blank" class="btn btn--secondary" rel="noopener noreferrer">Visit the Green Light Movement website</a>
+                </p>
               </div>
             </div>
             <div class="card">
@@ -329,7 +322,8 @@ secondary"><img src="images/undp-logo.svg" alt="UNDP Logo" style="height: 80px; 
                   </ul>
                 </p>
                 <p><br>
-                  Designed as a replicable model balancing social equity, environmental stewardship, and commercial viability.
+                  Designed as a replicable model balancing social equity, environmental stewardship, and commercial viability.<br/>
+          <a href="https://www.undp.org/south-africa/blog/model-circular-and-sustainable-food-production-localisation-and-replication" target="_blank" rel="noopener" class="btn btn--secondary">What the UNDP says about us</a>
                 </p>
               </div>
             </div>
@@ -354,6 +348,9 @@ secondary"><img src="images/undp-logo.svg" alt="UNDP Logo" style="height: 80px; 
                   <li>Empowers vulnerable communities with tangible economic benefits.</li>
                   <li>Offers a replicable and transparent model for sustainable environmental action.</li>
                 </ul>
+                <p>
+                  <a href="https://litter4tokens.org" target="_blank" rel="noopener noreferrer" class="btn btn--secondary">Visit the litter4tokens.org website</a>
+                </p>
               </div>
             </div>
           </div>
@@ -383,9 +380,105 @@ secondary"><img src="images/undp-logo.svg" alt="UNDP Logo" style="height: 80px; 
           </ul>
         </div>
       </section>
+<!-- Insert this before the Contact section, after the Climate Context section -->
+<!-- ---------- Gallery ---------- -->
+<section id="gallery" class="section section--alt">
+  <div class="container">
+    <h2>Gallery</h2>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <div id="galleryMainRow" style="display: flex; align-items: center; gap: 16px;">
+        <button id="galleryPrev" class="btn btn--secondary" aria-label="Previous images">&larr;</button>
+        <div id="galleryMainImages" style="display: flex; gap: 16px;">
+          <!-- Images will be injected here -->
+        </div>
+        <button id="galleryNext" class="btn btn--secondary" aria-label="Next images">&rarr;</button>
+      </div>
+      <div id="galleryThumbnails" style="display: flex; gap: 8px; margin-top: 16px; flex-wrap: wrap; justify-content: center;">
+        <!-- Thumbnails will be injected here -->
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  const galleryImages = [
+    "gallery/1732171713211.jpeg",
+    "gallery/1732171713965.jpeg",
+    "gallery/1732171714257.jpeg",
+    "gallery/1732171714398.jpeg",
+    "gallery/1734011463527.jpeg",
+    "gallery/1734011465753.jpeg",
+    "gallery/1737814415164.jpeg",
+    "gallery/1737814417555.jpeg",
+    "gallery/1740385864511.jpeg",
+    "gallery/1740385866936.jpeg",
+    "gallery/1744403948538.jpeg",
+    "gallery/1744403948676.jpeg",
+    "gallery/1744403949369.jpeg",
+    "gallery/1744403949117.jpeg",
+    "gallery/image001.jpeg",
+    "gallery/image002.jpeg",
+    "gallery/image003.jpeg",
+    "gallery/image004.jpeg",
+    "gallery/image005.jpeg"
+  ];
+  let currentStart = 0;
+  const imagesPerPage = 3;
+
+  const mainImagesDiv = document.getElementById('galleryMainImages');
+  const prevBtn = document.getElementById('galleryPrev');
+  const nextBtn = document.getElementById('galleryNext');
+  const thumbsDiv = document.getElementById('galleryThumbnails');
+
+  function renderMainImages() {
+    mainImagesDiv.innerHTML = '';
+    for (let i = 0; i < imagesPerPage; i++) {
+      const imgIdx = (currentStart + i) % galleryImages.length;
+      const img = document.createElement('img');
+      img.src = galleryImages[imgIdx];
+      img.alt = `Gallery Image ${imgIdx + 1}`;
+      img.style = "max-width:220px; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08);";
+      mainImagesDiv.appendChild(img);
+    }
+  }
+
+  function renderThumbnails() {
+    thumbsDiv.innerHTML = '';
+    galleryImages.forEach((src, idx) => {
+      const thumb = document.createElement('img');
+      thumb.src = src;
+      thumb.alt = `Thumb ${idx + 1}`;
+      thumb.style = "width:48px; height:48px; object-fit:cover; border-radius:4px; cursor:pointer; border:2px solid transparent;";
+      // Highlight if in current view
+      if (idx >= currentStart && idx < currentStart + imagesPerPage) {
+        thumb.style.border = '2px solid #1a3c2b';
+      }
+      thumb.onclick = () => {
+        currentStart = idx;
+        renderMainImages();
+        renderThumbnails();
+      };
+      thumbsDiv.appendChild(thumb);
+    });
+  }
+
+  prevBtn.onclick = function() {
+    currentStart = (currentStart - imagesPerPage + galleryImages.length) % galleryImages.length;
+    renderMainImages();
+    renderThumbnails();
+  };
+  nextBtn.onclick = function() {
+    currentStart = (currentStart + imagesPerPage) % galleryImages.length;
+    renderMainImages();
+    renderThumbnails();
+  };
+
+  // Initial render
+  renderMainImages();
+  renderThumbnails();
+</script>
 
       <!-- ---------- Contact ---------- -->
-      <section id="contact" class="section  section--alt">
+      <section id="contact" class="section">
         <div class="container">
           <h2>Contact Us</h2>
           <p>
