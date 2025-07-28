@@ -383,7 +383,6 @@
           </ul>
         </div>
       </section>
-<!-- Insert this before the Contact section, after the Climate Context section -->
 <!-- ---------- Gallery ---------- -->
 <section id="gallery" class="section section--alt">
   <div class="container">
@@ -424,8 +423,14 @@
     "gallery/image004.jpeg",
     "gallery/image005.jpeg"
   ];
+
+  // Responsive: 1 image on mobile, 3 on desktop
+  function getImagesPerPage() {
+    return window.innerWidth <= 600 ? 1 : 3;
+  }
+
   let currentStart = 0;
-  const imagesPerPage = 3;
+  let imagesPerPage = getImagesPerPage();
 
   const mainImagesDiv = document.getElementById('galleryMainImages');
   const prevBtn = document.getElementById('galleryPrev');
@@ -474,6 +479,20 @@
     renderMainImages();
     renderThumbnails();
   };
+
+  // Responsive handler
+  function handleResize() {
+    const newImagesPerPage = getImagesPerPage();
+    if (newImagesPerPage !== imagesPerPage) {
+      imagesPerPage = newImagesPerPage;
+      // Adjust currentStart to keep the gallery in sync
+      currentStart = Math.floor(currentStart / imagesPerPage) * imagesPerPage;
+      renderMainImages();
+      renderThumbnails();
+    }
+  }
+
+  window.addEventListener('resize', handleResize);
 
   // Initial render
   renderMainImages();
